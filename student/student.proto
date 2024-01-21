@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+
+package student;
+
+option go_package =".";
+
+service Network {
+	rpc WelcomeStudent(Student) returns (Welcome) {}
+}
+message Student {
+	string name = 1;
+	int32 age = 2;
+	float weight = 3;
+}
+
+message Welcome {
+	string message = 1;
+}
